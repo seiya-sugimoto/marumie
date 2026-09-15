@@ -133,7 +133,7 @@ export function convertCategoryAggregationToSankeyData(
       links.push({
         source: createSafariCompatibleId(`income-sub-${item.subcategory}`),
         target: createSafariCompatibleId(`income-${item.category}`),
-        value: item.totalAmount,
+        value: Number(item.totalAmount) || 0,
       });
     }
   }
@@ -142,7 +142,7 @@ export function convertCategoryAggregationToSankeyData(
     links.push({
       source: createSafariCompatibleId(`income-${category}`),
       target: createSafariCompatibleId("合計"),
-      value: amount,
+      value: Number(amount) || 0,
     });
   }
 
@@ -150,7 +150,7 @@ export function convertCategoryAggregationToSankeyData(
     links.push({
       source: createSafariCompatibleId("合計"),
       target: createSafariCompatibleId(`expense-${category}`),
-      value: amount,
+      value: Number(amount) || 0,
     });
   }
 
@@ -159,7 +159,7 @@ export function convertCategoryAggregationToSankeyData(
       links.push({
         source: createSafariCompatibleId(`expense-${item.category}`),
         target: createSafariCompatibleId(`expense-sub-${item.subcategory}`),
-        value: item.totalAmount,
+        value: Number(item.totalAmount) || 0,
       });
     }
   }

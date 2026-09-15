@@ -135,6 +135,8 @@ export default function FinancialSummarySection({
   summary,
 }: FinancialSummarySectionProps) {
   console.log("FinancialSummarySection received summary:", summary);
+  console.log("🌿 sankeyData:", sankeyData);
+  console.log("🌿 sankeyData.links:", sankeyData?.links);
 
   // 個人家計簿データがある場合はそれを使用、なければsankeyDataから計算
   const financialData = summary
