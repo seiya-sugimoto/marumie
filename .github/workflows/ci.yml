@@ -5,10 +5,12 @@ on:
     paths:
       - 'admin/**'
       - 'webapp/**'
+      - '.github/workflows/ci.yml'
   pull_request:
     paths:
       - 'admin/**'
       - 'webapp/**'
+      - '.github/workflows/ci.yml'
 
 jobs:
   lint-and-test:
